@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "582176200325",
+    "firebase_url": "https://hkbu-comp4097-fashiontap.firebaseio.com",
+    "project_id": "hkbu-comp4097-fashiontap",
+    "storage_bucket": "hkbu-comp4097-fashiontap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582176200325:android:f339fab9a45bbae1",
+        "android_client_info": {
+          "package_name": "hk.edu.hkbu.comp.groupd.fashiontap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582176200325-4s1l4vtleeqfe46q82u06cpl9ch1rhsn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hk.edu.hkbu.comp.groupd.fashiontap",
+            "certificate_hash": "e2b6951ee353339f910ff17e82376b43aa0cc333"
+          }
+        },
+        {
+          "client_id": "582176200325-flfs7kjoc991302on93bnmorbi9ltto7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVAm51M_8KIPnnixNtnqmsPPfs8TL-EHQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582176200325-flfs7kjoc991302on93bnmorbi9ltto7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
