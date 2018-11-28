@@ -1,5 +1,6 @@
 package hk.edu.hkbu.comp.groupd.fashiontap
 
+import android.annotation.SuppressLint
 import android.support.design.internal.BottomNavigationItemView
 import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
@@ -11,6 +12,7 @@ import android.util.Log
  * See http://stackoverflow.com/questions/40176244/how-to-disable-bottomnavigationview-shift-mode
  */
 
+@SuppressLint("RestrictedApi")
 fun BottomNavigationView.disableShiftMode() {
     val menuView = getChildAt(0) as BottomNavigationMenuView
     try {

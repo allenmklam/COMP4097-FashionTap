@@ -15,8 +15,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimaryDark"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
         app:logo="@mipmap/ic_launcher"
         app:titleTextColor="@color/primary_text"/>
 

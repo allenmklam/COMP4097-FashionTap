@@ -1,14 +1,19 @@
 package hk.edu.hkbu.comp.groupd.fashiontap
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import com.google.firebase.auth.FirebaseAuth
+import hk.edu.hkbu.comp.groupd.fashiontap.R.menu.toolbar_menu
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
@@ -30,6 +35,50 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setSupportActionBar(toolbar)
         initBottomNavigation()
         initFragment(savedInstanceState)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        toolbar_menu
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.logout -> {
+            // User chose the "Settings" item, show the app settings UI...
+
+            val builder = AlertDialog.Builder(this@MainActivity)
+
+            // Set the alert dialog title
+            builder.setTitle("確認登出？")
+
+            // Display a message on alert dialog
+            builder.setMessage("你確定要登出嗎？")
+
+            // Set a positive button and its click listener on alert dialog
+            builder.setPositiveButton("YES"){dialog, which ->
+                // Do something when user press the positive button
+                FirebaseAuth.getInstance().signOut()
+                val intentRegister = Intent(applicationContext, LoginActivity::class.java)
+                startActivity(intentRegister)
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                finish()
+            }
+
+            // Display a negative button on alert dialog
+            builder.setNegativeButton("No"){dialog,which ->
+
+            }
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+
+            true
+        }
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {

@@ -42,7 +42,7 @@ class FashionFragment : Fragment() {
 
         initThreads()
 
-        return binding.getRoot();
+        return binding.root;
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

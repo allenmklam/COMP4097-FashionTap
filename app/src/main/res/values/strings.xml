@@ -2,7 +2,7 @@
     <string name="app_name">FashionTap</string>
     <string name="title_home">我的衣櫃</string>
     <string name="title_dashboard">潮流配搭</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">潮流影片</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -35,4 +35,6 @@
     <string name="password">Password</string>
     <string name="password_confirm">Confirm password</string>
     <string name="submit">Submit</string>
+    <string name="title_activity_show_all">所有衣物</string>
+    <string name="title_picking">幫我選</string>
 </resources>
